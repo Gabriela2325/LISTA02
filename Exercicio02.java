@@ -7,9 +7,11 @@ public class Exercicio02 {
         //digitados pelo usuário e, logo após,
         // mostre o número de cada posição do vetor e se ele é positivo, negativo ou zero.
 
-        double[] numeros = new double[3];
+        int tam = Prompt.lerInteiro("Digite o tamanho do vetor: ");
 
-        for (int i = 0; i < 3 ; i++) {
+        double[] numeros = new double[tam];
+
+        for (int i = 0; i < tam ; i++) {
             System.out.print("Digite o " + (i + 1) + "º número: ");
             numeros[i] = Prompt.lerDecimal();
         }
@@ -20,9 +22,9 @@ public class Exercicio02 {
 
         int positivo = 0, negativo = 0, zero = 0;
 
-        double[] negativos = new double[3];
-        double[] zeros = new double[3];
-        double[] positivos = new double[3];
+        double[] negativos = new double[tam];
+        double[] zeros = new double[tam];
+        double[] positivos = new double[tam];
 
         for (double num : numeros) {
             if (num < 0 ) {
